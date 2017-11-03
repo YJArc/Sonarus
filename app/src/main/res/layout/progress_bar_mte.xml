@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="4dp">
+
+    <ProgressBar            style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBar_left"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_weight="1"
+        android:progressTint="@color/PrimaryAccent"
+        android:progress="0"
+
+        android:rotation="180"/>
+
+    <ProgressBar    style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBar_right"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_weight="1"
+        android:progressTint="@color/PrimaryAccent"
+        android:progress="0"
+        />
+</LinearLayout>

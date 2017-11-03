@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_profile"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/parallax_image_height">
+
+    <android.support.v4.widget.Space
+        android:id="@+id/header_profile_centerline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+
+    <ImageView
+        android:id="@+id/header_profile_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/parallax_image_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/example" />
+
+    <View
+        android:id="@+id/header_profile_banner_darkener"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/parallax_image_height"
+
+        android:background="@android:color/black"
+        android:alpha=".3"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/header_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/header_profile_centerline"
+        android:paddingRight="32dp"
+        android:paddingLeft="32dp"
+
+        android:text="Yohanan Arciniega"
+        android:textSize="16sp"
+
+        android:textColor="@color/textFocus"
+        android:textAlignment="center" />
+
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/header_profile_img"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+
+        android:layout_above="@+id/header_profile_centerline"
+        android:layout_centerHorizontal="true"
+
+        app:civ_border_color="@color/textFocus"
+        app:civ_border_width="2dp"
+
+        android:src="@drawable/ic_profile" />
+
+
+    <TextView
+        android:id="@+id/header_profile_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/header_profile_name"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+
+        android:text=""
+        android:textColor="@color/textDim"
+        android:textAlignment="center"/>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/header_profile_lower"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:orientation="horizontal">-->
+
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/lay1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<android.support.v4.widget.Space-->
+                <!--android:id="@+id/header_profile_lower_centerline"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_centerVertical="true"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/header_profile_session_count"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@id/header_profile_lower_centerline"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="32"-->
+                <!--android:textAlignment="center"-->
+                <!--android:includeFontPadding="false"-->
+                <!--android:textColor="@color/textFocus"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView01"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/header_profile_lower_centerline"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="Sessions"-->
+                <!--android:textAlignment="center"-->
+                <!--android:includeFontPadding="false"-->
+                <!--android:textColor="@color/textDim"-->
+                <!--android:textSize="12sp"/>-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/lay2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<android.support.v4.widget.Space-->
+                <!--android:id="@+id/header_profile_quarterline2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_centerVertical="true"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/header_profile_follower_count"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@id/header_profile_quarterline2"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="12k"-->
+                <!--android:textAlignment="center"-->
+                <!--android:includeFontPadding="false"-->
+                <!--android:textColor="@color/textFocus"-->
+                <!--android:textSize="16sp"  />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView02"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/header_profile_quarterline2"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="Followers"-->
+                <!--android:textAlignment="center"-->
+                <!--android:includeFontPadding="false"-->
+                <!--android:textColor="@color/textDim"-->
+                <!--android:textSize="12sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/lay3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<android.support.v4.widget.Space-->
+                <!--android:id="@+id/header_profile_quarterline3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_centerVertical="true"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/header_profile_following_count"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@id/header_profile_quarterline3"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="652"-->
+                <!--android:textAlignment="center"-->
+                <!--android:includeFontPadding="false"-->
+                <!--android:textColor="@color/textFocus"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView03"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/header_profile_quarterline3"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="Following"-->
+                <!--android:textAlignment="center"-->
+                <!--android:includeFontPadding="false"-->
+                <!--android:textColor="@color/textDim"-->
+                <!--android:textSize="12sp" />-->
+        <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <Button
+        android:id="@+id/profile_edit_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_more"
+        android:backgroundTint="@color/textFocus"/>
+
+    <Button
+        android:id="@+id/profile_follow_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_follow"
+        android:backgroundTint="@color/textFocus"/>
+
+    <Button
+        android:id="@+id/profile_write_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_write"
+        android:backgroundTint="@color/textFocus"/>
+
+
+</RelativeLayout>

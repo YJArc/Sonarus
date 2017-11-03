@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textDim">#FF949498</color>
+    <color name="textFocus">#fef9fc</color>
+
+
+    <color name="PrimaryDark">#FF111112 </color>
+    <color name="PrimaryBase">#FF414141</color>
+    <color name="PrimaryLight">#FF909191</color>
+
+    <color name="SecondaryDark">#FF2e364f</color>
+    <color name="SecondaryBase">#FF42647B</color>
+
+    <color name="PrimaryAccent">#FF66FFFC</color>
+    <color name="SecondaryAccent">#FFCCB400</color>
+    <color name="TertiaryAccent">#FFEE3333</color>
+
+    <color name="PrimaryShadowTransparent">#BB111112 </color>
+    <color name="PrimaryShadowHardAlpha">#FF1d202a </color>
+</resources>

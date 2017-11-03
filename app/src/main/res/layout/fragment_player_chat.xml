@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/PrimaryShadowHardAlpha">
+
+
+
+    <Button
+        android:id="@+id/btn_chat_send"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Send" />
+
+    <EditText
+        android:id="@+id/input_chat_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:background="@drawable/rounded_textfield"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/btn_chat_send"
+        android:layout_margin="12dp"
+
+
+        android:inputType="textPersonName"
+        android:hint=" Send a message"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_chat_msg">
+        <ScrollView
+            android:id="@+id/chat_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/player_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/textFocus" />
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/player_chat_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Join or start a Session to engage in chat"
+            android:textSize="16sp"
+            android:textColor="@color/textFocus"
+            android:layout_centerInParent="true"
+            android:gravity="center"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

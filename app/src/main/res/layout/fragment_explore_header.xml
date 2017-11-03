@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_explore"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/parallax_image_height">
+
+    <android.support.v4.widget.Space
+        android:id="@+id/explore_header_centerline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/explore_header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/parallax_image_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/example" />
+
+    <ImageView
+        android:id="@+id/explore_header_sonarus"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:cropToPadding="true"
+        android:layout_alignBottom="@+id/explore_header_centerline"
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/ic_explore"
+        android:tint="@color/textFocus"/>
+
+    <TextView
+        android:id="@+id/explore_header_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/explore_header_centerline"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+
+        android:text="See what others are listening to with Sonarus Stream, stream music with friends, or check out what your favorite artists are listening to"
+        android:textColor="@color/textFocus"
+        android:textAlignment="center" />
+
+</RelativeLayout>

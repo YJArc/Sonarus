@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/SecondaryDark">
+
+        <EditText android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:inputType="textPersonName"
+            android:imeActionLabel="Search"
+            android:background="@drawable/rounded_textfield"
+
+            android:hint="Search"
+
+            android:paddingLeft="10dp"
+            android:layout_margin="5dp"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout android:id="@+id/search_default_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Space android:id="@+id/search_bg_centerline"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_search"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@id/search_bg_centerline"
+                android:tint="@color/textFocus"/>
+            <TextView android:id="@+id/search_bg_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_below="@id/search_bg_centerline"
+                android:text="Search"
+                android:textColor="@color/textFocus"/>
+            <TextView android:id="@+id/search_bg_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_below="@id/search_bg_text"
+                android:text="Search Spotify for tracks and \n add them to your Queue"
+                android:textColor="@color/textDim"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView android:id="@+id/search_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:visibility="invisible"
+            android:background="@color/PrimaryShadowHardAlpha"/>
+
+        <android.support.v7.widget.RecyclerView android:id="@+id/search_recent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:background="@color/PrimaryShadowHardAlpha">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

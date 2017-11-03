@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@+id/explore_room_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="152dp"
+    android:layout_margin="4dp"
+
+    card_view:cardBackgroundColor="@color/PrimaryLight"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView android:id="@+id/room_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/PrimaryShadowTransparent"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout android:id="@+id/room_banner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/PrimaryShadowTransparent">
+
+            <Space android:id="@+id/room_banner_centerline"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/room_creator_pic"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:padding="2dp"
+                card_view:civ_border_width="1dp"
+                card_view:civ_border_color="@color/PrimaryAccent"
+                android:layout_centerVertical="true"/>
+
+            <TextView android:id="@+id/room_creator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_above="@+id/room_banner_centerline"
+                android:layout_toRightOf="@id/room_creator_pic"
+                android:paddingLeft="4dp"
+
+                android:text="Creator"
+                android:textColor="@color/textFocus"
+                android:textSize="16sp"
+                android:shadowColor="@color/SecondaryBase"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+
+            <TextView android:id="@+id/room_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/room_banner_centerline"
+                android:layout_toRightOf="@id/room_creator_pic"
+                android:paddingLeft="4dp"
+
+                android:text="Bio"
+                android:textColor="@color/textDim"
+                android:textSize="14sp"
+                android:shadowColor="@color/SecondaryDark"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+
+
+        </RelativeLayout>
+
+        <TextView android:id="@+id/room_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:shadowColor="@color/SecondaryBase"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:text="Room Name"
+            android:textColor="@color/textFocus"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

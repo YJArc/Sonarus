@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout android:id="@+id/broadcast_slide"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    app:umanoOverlay="true"
+    app:umanoPanelHeight="48dp"
+    app:umanoShadowHeight="8dp"
+    app:umanoFadeColor="#00000000">
+
+    <RelativeLayout android:id="@+id/player_upper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/PrimaryShadowHardAlpha">
+
+        <Space android:id="@+id/player_bottom_space"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView android:id="@+id/player_art_ambient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/player_bottom_space"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout android:id="@+id/player_controls"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout android:id="@+id/player_info"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <Space android:id="@+id/player_info_centerline"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true" />
+
+                <TextView android:id="@+id/player_song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/player_info_centerline"
+
+                    android:text="Song Name"
+                    android:textSize="16sp"
+                    android:textColor="@color/textFocus"
+                    android:shadowColor="@color/SecondaryBase"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"/>
+
+                <TextView android:id="@+id/player_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/player_info_centerline"
+
+                    android:text="Artist Name"
+                    android:textSize="14sp"
+                    android:textColor="@color/textDim"
+                    android:shadowColor="@color/SecondaryDark"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/player_show_control_area"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_below="@+id/player_info"
+                android:animateLayoutChanges="true">
+
+                <ImageView android:id="@+id/player_art"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_album"/>
+
+                <Button android:id="@+id/player_play_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+
+                    android:layout_centerInParent="true"
+
+                    android:background="@drawable/ic_play_arrow"
+                    android:backgroundTint="@color/textFocus"
+                    android:shadowColor="@color/SecondaryBase"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="4"
+
+                    android:visibility="invisible"
+                    />
+
+                <Button android:id="@+id/player_next_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="10dp"
+
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="18dp"
+
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/textDim"
+                    android:shadowColor="@color/SecondaryBase"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"/>
+
+            </RelativeLayout>
+
+            <SeekBar android:id="@+id/player_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/player_show_control_area"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginLeft="48dp"
+
+
+                android:progressBackgroundTint="@color/PrimaryAccent"
+                android:progress="50"/>
+
+            <TextView android:id="@+id/player_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/player_seekbar"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="0:00"
+                android:textColor="@color/textDim"
+                android:shadowColor="@color/SecondaryDark"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"/>
+
+            <TextView android:id="@+id/player_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/player_seekbar"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:text="0:00"
+                android:textColor="@color/textDim"
+                android:shadowColor="@color/SecondaryDark"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"/>
+
+        </RelativeLayout>
+
+        <!--This layout hides when the player_panel hides-->
+        <include layout="@layout/player_panel" />
+
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/player_lower"
+        android:layout_width="match_parent"
+        android:layout_height="308dp">
+
+        <android.support.design.widget.TabLayout android:id="@+id/player_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:tabMode="fixed"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabGravity="fill"
+            android:background="@color/PrimaryDark" />
+
+        <com.yjarc.sonarus.UIHelper.CustomViewPager
+            android:id="@+id/player_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/player_tabs"
+            android:nestedScrollingEnabled="true"/>
+
+    </RelativeLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
